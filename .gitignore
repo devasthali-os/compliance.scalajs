@@ -3,4 +3,4 @@ target
 project/target
 node_modules
 src/main/resources/main.js
-
+package-lock.json

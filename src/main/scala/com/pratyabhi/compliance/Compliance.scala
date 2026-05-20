@@ -1,4 +1,4 @@
-package com.duwamish.compliance
+package com.pratyabhi.compliance
 
 import org.scalajs.dom
 import scala.scalajs.js

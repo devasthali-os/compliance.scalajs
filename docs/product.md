@@ -10,7 +10,7 @@ This repository (`compliance.scalajs`) is the **front-end shell**: Scala.js comp
 |-----------|-------|
 | Product name | Compliance |
 | Version | 0.1 (scaffold) |
-| Primary entry | `com.duwamish.compliance.Compliance` |
+| Primary entry | `com.pratyabhi.compliance.Compliance` |
 | Stack | Scala 3.3.4, Scala.js 1.16, scalajs-dom, Express |
 | Default URL | `http://localhost:8080/` |
 
@@ -194,7 +194,7 @@ This is intentionally minimal: it validates the Scala.js → browser → Node de
 ### 8.1 Module Layout (target)
 
 ```
-src/main/scala/com/duwamish/compliance/
+src/main/scala/com/pratyabhi/compliance/
   Compliance.scala          # entry point
   app/                      # shell, routing
   views/                    # screens
@@ -312,5 +312,5 @@ case class Policy(
 ## 14. References
 
 - README: build and run instructions
-- `com.duwamish.compliance.Compliance` — current entry point
+- `com.pratyabhi.compliance.Compliance` — current entry point
 - Sibling package: `../sjs-nodejs` — sbt bootstrap for npm workflows
