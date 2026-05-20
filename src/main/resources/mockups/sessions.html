@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sessions — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="index.html">All screens</a> · Session list (F2.2)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><h1>Compliance</h1><p>Pratyabhi Corp · Production</p></div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sessions.html" class="active">Sessions</a></li>
+        <li><a href="review.html">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <h2>Sessions</h2>
+        <div class="topbar-actions"><button class="btn btn-primary" type="button">Export CSV</button></div>
+      </header>
+      <main class="content">
+        <section class="panel">
+          <div class="filters">
+            <input type="search" placeholder="Search prompts, users, session ID…" style="min-width:220px">
+            <input type="date" value="2026-05-12">
+            <input type="date" value="2026-05-19">
+            <select><option>All severities</option><option>Critical</option><option>High</option></select>
+            <select><option>All policies</option><option>PII — No SSN</option><option>Geo — EU</option></select>
+            <select><option>All models</option><option>gpt-4o</option><option>claude-3-5</option></select>
+            <select><option>All statuses</option><option>Flagged</option><option>Under review</option></select>
+            <button class="btn" type="button">Apply</button>
+          </div>
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr><th>Started</th><th>Session ID</th><th>User / App</th><th>Model</th><th>Risk</th><th>Violations</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>May 19, 10:42</td>
+                  <td><a href="session-detail.html">sess_8f2ac91</a></td>
+                  <td>jchen · Support Bot</td>
+                  <td>gpt-4o</td>
+                  <td>0.91</td>
+                  <td><span class="badge badge-critical">1 critical</span></td>
+                  <td><span class="badge badge-review">Under review</span></td>
+                </tr>
+                <tr>
+                  <td>May 19, 10:38</td>
+                  <td><a href="session-detail.html">sess_3b1d7e2</a></td>
+                  <td>mross · Internal Copilot</td>
+                  <td>claude-3-5</td>
+                  <td>0.78</td>
+                  <td><span class="badge badge-high">1 high</span></td>
+                  <td><span class="badge badge-flagged">Flagged</span></td>
+                </tr>
+                <tr>
+                  <td>May 19, 10:21</td>
+                  <td><a href="session-detail.html">sess_9c44a03</a></td>
+                  <td>api-svc · Docs Assistant</td>
+                  <td>gpt-4o-mini</td>
+                  <td>0.55</td>
+                  <td><span class="badge badge-medium">1 medium</span></td>
+                  <td><span class="badge badge-flagged">Flagged</span></td>
+                </tr>
+                <tr>
+                  <td>May 19, 09:12</td>
+                  <td><a href="session-detail.html">sess_2d88f01</a></td>
+                  <td>pkumar · Sales Enablement</td>
+                  <td>gpt-4o</td>
+                  <td>0.12</td>
+                  <td>—</td>
+                  <td><span class="badge badge-clean">Clean</span></td>
+                </tr>
+                <tr>
+                  <td>May 19, 08:47</td>
+                  <td><a href="session-detail.html">sess_7aa3b19</a></td>
+                  <td>dev-ci · Code Review Agent</td>
+                  <td>gpt-4o</td>
+                  <td>0.24</td>
+                  <td><span class="badge badge-low">1 low</span></td>
+                  <td><span class="badge badge-clean">Clean</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagination">
+              <span>Showing 1–25 of 1,284 sessions</span>
+              <span>
+                <button class="btn" type="button" disabled>Previous</button>
+                <button class="btn" type="button">Next</button>
+              </span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance — UI Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+  <style>
+    .hub {
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .hub h1 {
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem;
+    }
+    .hub > p {
+      color: var(--muted);
+      margin: 0 0 2rem;
+    }
+    .mockup-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .mockup-list li {
+      margin-bottom: 0.65rem;
+    }
+    .mockup-list a {
+      display: block;
+      padding: 1rem 1.15rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+    .mockup-list a:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+    .mockup-list strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .mockup-list span {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="hub">
+    <h1>Compliance UI Mockups</h1>
+    <p>Static HTML wireframes for Phase 1–3 screens. Open any page in a browser; navigation links connect the set.</p>
+    <ul class="mockup-list">
+      <li>
+        <a href="dashboard.html">
+          <strong>Dashboard</strong>
+          <span>KPI overview, recent violations — F2.1</span>
+        </a>
+      </li>
+      <li>
+        <a href="sessions.html">
+          <strong>Session list</strong>
+          <span>Paginated table with filters — F2.2, F2.4</span>
+        </a>
+      </li>
+      <li>
+        <a href="session-detail.html">
+          <strong>Session detail</strong>
+          <span>Message thread, matched rules, review actions — F2.3</span>
+        </a>
+      </li>
+      <li>
+        <a href="policies.html">
+          <strong>Policy list</strong>
+          <span>Active, draft, and retired policies — F3.1</span>
+        </a>
+      </li>
+      <li>
+        <a href="policy-editor.html">
+          <strong>Policy editor</strong>
+          <span>Rule toggles and simulation preview — F3.2, F3.3</span>
+        </a>
+      </li>
+      <li>
+        <a href="review.html">
+          <strong>Human review queue</strong>
+          <span>Flagged sessions awaiting triage — F4.1, F4.2</span>
+        </a>
+      </li>
+      <li>
+        <a href="reports.html">
+          <strong>Reports &amp; exports</strong>
+          <span>Audit log export and schedules — F5.1</span>
+        </a>
+      </li>
+    </ul>
+    <p style="margin-top: 2rem; font-size: 0.8125rem; color: var(--muted);">
+      Spec: docs/product-spec.md · v0.3 target UX
+    </p>
+  </div>
+</body>
+</html>

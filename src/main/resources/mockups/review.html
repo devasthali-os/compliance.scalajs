@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review queue — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+  
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="index.html">All screens</a> · Human review (F4.1, F4.2)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><h1>Compliance</h1><p>Pratyabhi Corp · Production</p></div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sessions.html">Sessions</a></li>
+        <li><a href="review.html" class="active">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar"><h2>Review queue</h2><div class="topbar-actions"><span style="color:var(--muted);font-size:0.8125rem;">14 pending · 6 SLA &lt; 4h</span></div></header>
+      <main class="content">
+        <section class="panel">
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr><th>Queued</th><th>Session</th><th>Severity</th><th>Policy</th><th>Assignee</th><th>SLA</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>32m ago</td>
+                  <td><a href="session-detail.html">sess_8f2ac91</a></td>
+                  <td><span class="badge badge-critical">Critical</span></td>
+                  <td>PII — No SSN</td>
+                  <td>Unassigned</td>
+                  <td style="color:var(--danger);font-weight:600;">3h 28m left</td>
+                  <td><a href="session-detail.html" class="btn btn-primary" style="padding:0.3rem 0.6rem;">Triage</a></td>
+                </tr>
+                <tr>
+                  <td>1h 12m ago</td>
+                  <td><a href="session-detail.html">sess_1a77f88</a></td>
+                  <td><span class="badge badge-high">High</span></td>
+                  <td>Geo — EU residency</td>
+                  <td>arivera</td>
+                  <td>6h 48m left</td>
+                  <td><a href="session-detail.html" class="btn" style="padding:0.3rem 0.6rem;">Continue</a></td>
+                </tr>
+                <tr>
+                  <td>2h 05m ago</td>
+                  <td><a href="session-detail.html">sess_3b1d7e2</a></td>
+                  <td><span class="badge badge-high">High</span></td>
+                  <td>Blocked topics</td>
+                  <td>sdev</td>
+                  <td>On track</td>
+                  <td><a href="session-detail.html" class="btn" style="padding:0.3rem 0.6rem;">Continue</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-header"><h3>Recently completed</h3></div>
+          <div class="panel-body" style="padding:1rem;color:var(--muted);font-size:0.8125rem;">
+            sess_4c21a88 — Approved by arivera · "False positive; test data" · May 19, 09:10
+          </div>
+        </section>
+</main>
+    </div>
+  </div>
+</body>
+</html>

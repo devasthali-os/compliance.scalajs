@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+  
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="index.html">All screens</a> · Reports &amp; exports (F5.1)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><h1>Compliance</h1><p>Pratyabhi Corp · Production</p></div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sessions.html">Sessions</a></li>
+        <li><a href="review.html">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="reports.html" class="active">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar"><h2>Reports &amp; exports</h2><div class="topbar-actions"><button class="btn btn-primary" type="button">New export</button></div></header>
+      <main class="content">
+        <section class="panel">
+          <div class="panel-header"><h3>Export audit log</h3></div>
+          <div class="form-grid">
+            <div class="form-row"><label>Date range</label><div style="display:flex;gap:0.5rem;"><input type="date" value="2026-05-01"><input type="date" value="2026-05-19"></div></div>
+            <div class="form-row"><label>Format</label><select><option>CSV</option><option>JSON</option></select></div>
+            <div class="form-row"><label>Include</label><div><label><input type="checkbox" checked> Sessions</label><br><label><input type="checkbox" checked> Violations</label><br><label><input type="checkbox"> Redacted prompts</label></div></div>
+            <div class="form-row"><label></label><button class="btn btn-primary" type="button">Generate export</button></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-header"><h3>Recent exports</h3></div>
+          <div class="panel-body">
+            <table>
+              <thead><tr><th>Requested</th><th>Range</th><th>Format</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>May 19, 08:00</td><td>May 1 – May 18</td><td>CSV</td><td><span class="badge badge-clean">Ready</span></td><td><a href="#">Download</a></td></tr>
+                <tr><td>May 12, 14:30</td><td>Apr 1 – Apr 30</td><td>JSON</td><td><span class="badge badge-clean">Ready</span></td><td><a href="#">Download</a></td></tr>
+                <tr><td>May 5, 09:15</td><td>Q1 2026</td><td>CSV</td><td><span class="badge badge-low">Expired</span></td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-header"><h3>Scheduled summaries</h3><span style="font-size:0.75rem;color:var(--muted);">Phase 5 — backend</span></div>
+          <div class="empty-state">
+            <p>No schedules configured.</p>
+            <button class="btn" type="button">Add weekly summary</button>
+          </div>
+        </section>
+</main>
+    </div>
+  </div>
+</body>
+</html>

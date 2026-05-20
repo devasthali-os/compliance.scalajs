@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="index.html">All screens</a> · Phase 2 — Dashboard (F2.1)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Compliance</h1>
+        <p>Pratyabhi Corp · Production</p>
+      </div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="sessions.html">Sessions</a></li>
+        <li><a href="review.html">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <h2>Dashboard</h2>
+        <div class="topbar-actions">
+          <button class="btn" type="button">Last 24 hours ▾</button>
+          <button class="btn btn-primary" type="button">Export summary</button>
+        </div>
+      </header>
+      <main class="content">
+        <div class="kpi-grid">
+          <div class="kpi">
+            <label>Sessions (24h)</label>
+            <div class="value">1,284</div>
+            <span class="delta up">↑ 12% vs yesterday</span>
+          </div>
+          <div class="kpi">
+            <label>Open violations</label>
+            <div class="value">37</div>
+            <span class="delta up">↑ 4 since morning</span>
+          </div>
+          <div class="kpi">
+            <label>Mean risk score</label>
+            <div class="value">0.42</div>
+            <span class="delta down">↓ 0.08 vs 7-day avg</span>
+          </div>
+          <div class="kpi">
+            <label>Review backlog</label>
+            <div class="value">14</div>
+            <span class="delta">6 due within SLA</span>
+          </div>
+        </div>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Recent violations</h3>
+            <a href="sessions.html">View all sessions →</a>
+          </div>
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Session</th>
+                  <th>App / User</th>
+                  <th>Model</th>
+                  <th>Severity</th>
+                  <th>Policy</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:42 AM</td>
+                  <td><a href="session-detail.html">sess_8f2a…c91</a></td>
+                  <td>Support Bot / jchen</td>
+                  <td>gpt-4o</td>
+                  <td><span class="badge badge-critical">Critical</span></td>
+                  <td>PII — No SSN in prompts</td>
+                  <td><span class="badge badge-review">Under review</span></td>
+                </tr>
+                <tr>
+                  <td>10:38 AM</td>
+                  <td><a href="session-detail.html">sess_3b1d…7e2</a></td>
+                  <td>Internal Copilot / mross</td>
+                  <td>claude-3-5</td>
+                  <td><span class="badge badge-high">High</span></td>
+                  <td>Blocked topics — Medical advice</td>
+                  <td><span class="badge badge-flagged">Flagged</span></td>
+                </tr>
+                <tr>
+                  <td>10:21 AM</td>
+                  <td><a href="session-detail.html">sess_9c44…a03</a></td>
+                  <td>Docs Assistant / api-svc</td>
+                  <td>gpt-4o-mini</td>
+                  <td><span class="badge badge-medium">Medium</span></td>
+                  <td>Retention — 90 day limit</td>
+                  <td><span class="badge badge-flagged">Flagged</span></td>
+                </tr>
+                <tr>
+                  <td>09:55 AM</td>
+                  <td><a href="session-detail.html">sess_1a77…f88</a></td>
+                  <td>HR Portal / lkim</td>
+                  <td>gpt-4o</td>
+                  <td><span class="badge badge-high">High</span></td>
+                  <td>Geo — EU data residency</td>
+                  <td><span class="badge badge-review">Under review</span></td>
+                </tr>
+                <tr>
+                  <td>09:41 AM</td>
+                  <td><a href="session-detail.html">sess_5e90…2bd</a></td>
+                  <td>Code Review Agent / dev-ci</td>
+                  <td>gpt-4o</td>
+                  <td><span class="badge badge-low">Low</span></td>
+                  <td>Custom — API key pattern</td>
+                  <td><span class="badge badge-clean">Clean</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Policies active</h3>
+            <a href="policies.html">Manage policies →</a>
+          </div>
+          <div class="panel-body" style="padding: 1rem 1.15rem;">
+            <p style="margin: 0; color: var(--muted); font-size: 0.8125rem;">
+              12 active · 2 draft · Last publish <strong>PII — No SSN</strong> v3 by arivera · May 18, 2026
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -145,22 +145,40 @@ This is intentionally minimal: it validates the Scala.js → browser → Node de
 
 ### 7.3 Key Screens (wireframe-level)
 
-**Dashboard**
+Interactive HTML mockups live in **`src/main/resources/mockups/`**, served at **http://localhost:8080/mockups/** when you run `npm start`. Summary:
+
+**Dashboard** — `/mockups/dashboard.html`
 
 - KPI cards: sessions (24h), violations, mean risk score, review backlog
 - Recent violations table (top 10)
 - Link to full session list
 
-**Session detail**
+**Session list** — `/mockups/sessions.html`
+
+- Paginated table with date, severity, policy, and model filters
+
+**Session detail** — `/mockups/session-detail.html`
 
 - Left: metadata (id, timestamp, actor, model, app)
 - Center: message thread (user / assistant turns)
 - Right: matched policies, scores, review status + actions
 
-**Policy editor**
+**Policy list** — `/mockups/policies.html`
+
+- Active, draft, and retired policies with version and rule counts
+
+**Policy editor** — `/mockups/policy-editor.html`
 
 - Form sections per rule type; enable/disable toggles
 - Preview panel with pass/fail on sample input
+
+**Review queue** — `/mockups/review.html`
+
+- Flagged sessions, assignee, SLA, triage actions
+
+**Reports** — `/mockups/reports.html`
+
+- Audit log export (CSV/JSON) and export history
 
 ### 7.4 Accessibility
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policies — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+  
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="index.html">All screens</a> · Policy list (F3.1)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><h1>Compliance</h1><p>Pratyabhi Corp · Production</p></div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sessions.html">Sessions</a></li>
+        <li><a href="review.html">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html" class="active">Policies</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar"><h2>Policies</h2><div class="topbar-actions"><button class="btn btn-primary" type="button">New policy</button></div></header>
+      <main class="content">
+        <section class="panel">
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr><th>Name</th><th>Version</th><th>Status</th><th>Rules</th><th>Last updated</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="policy-editor.html">PII — No SSN in prompts</a></td>
+                  <td>v3</td>
+                  <td><span class="badge badge-clean">Active</span></td>
+                  <td>4</td>
+                  <td>May 18, 2026 · arivera</td>
+                  <td><a href="policy-editor.html">Edit</a></td>
+                </tr>
+                <tr>
+                  <td><a href="policy-editor.html">Blocked topics — Medical advice</a></td>
+                  <td>v2</td>
+                  <td><span class="badge badge-clean">Active</span></td>
+                  <td>6</td>
+                  <td>May 10, 2026 · sdev</td>
+                  <td><a href="policy-editor.html">Edit</a></td>
+                </tr>
+                <tr>
+                  <td><a href="policy-editor.html">Geo — EU data residency</a></td>
+                  <td>v1</td>
+                  <td><span class="badge badge-clean">Active</span></td>
+                  <td>3</td>
+                  <td>Apr 22, 2026 · mross</td>
+                  <td><a href="policy-editor.html">Edit</a></td>
+                </tr>
+                <tr>
+                  <td><a href="policy-editor.html">Custom — API key pattern</a></td>
+                  <td>v4 (draft)</td>
+                  <td><span class="badge badge-flagged">Draft</span></td>
+                  <td>2</td>
+                  <td>May 19, 2026 · pkumar</td>
+                  <td><a href="policy-editor.html">Edit</a></td>
+                </tr>
+                <tr>
+                  <td>Retention — 90 day limit</td>
+                  <td>v1</td>
+                  <td><span class="badge badge-low">Retired</span></td>
+                  <td>1</td>
+                  <td>Jan 8, 2025 · arivera</td>
+                  <td>View history</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+</main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session detail — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="sessions.html">← Sessions</a> · Session detail (F2.3)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><h1>Compliance</h1><p>Pratyabhi Corp · Production</p></div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sessions.html" class="active">Sessions</a></li>
+        <li><a href="review.html">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <h2>sess_8f2ac91</h2>
+        <div class="topbar-actions">
+          <span class="badge badge-critical">Critical</span>
+          <button class="btn" type="button">Assign reviewer</button>
+          <button class="btn btn-primary" type="button">Open in review</button>
+        </div>
+      </header>
+      <main class="content">
+        <div class="split-3">
+          <section class="panel">
+            <div class="panel-header"><h3>Metadata</h3></div>
+            <ul class="meta-list" style="padding: 0 1rem;">
+              <li><strong>Started</strong> May 19, 2026 · 10:42:18 UTC</li>
+              <li><strong>Actor</strong> jchen (employee)</li>
+              <li><strong>Application</strong> Support Bot</li>
+              <li><strong>Model</strong> gpt-4o · us-east-1</li>
+              <li><strong>Risk score</strong> 0.91</li>
+              <li><strong>Status</strong> <span class="badge badge-review">Under review</span></li>
+              <li><strong>Retention</strong> Expires Aug 17, 2026</li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header"><h3>Conversation</h3></div>
+            <div class="thread">
+              <article class="message user">
+                <div class="role">User</div>
+                <p>Customer asked for refund. Their SSN is <span class="highlight">123-45-6789</span> — can you draft a response?</p>
+              </article>
+              <article class="message assistant">
+                <div class="role">Assistant</div>
+                <p>I can help draft a refund response. I should not store or repeat full SSNs. Please confirm last four digits only for verification.</p>
+              </article>
+              <article class="message user">
+                <div class="role">User</div>
+                <p>Just use the full number in the ticket notes.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header"><h3>Matched policies</h3></div>
+            <div class="rule-card">
+              <span class="badge badge-critical">Critical</span>
+              <strong style="display:block;margin:0.35rem 0;">PII — No SSN in prompts</strong>
+              <p style="margin:0;color:var(--muted);">Evidence: pattern <code>###-##-####</code> in user message</p>
+              <p style="margin:0.5rem 0 0;"><a href="policy-editor.html">View rule →</a></p>
+            </div>
+            <div class="rule-card">
+              <span class="badge badge-medium">Medium</span>
+              <strong style="display:block;margin:0.35rem 0;">Retention — 90 day limit</strong>
+              <p style="margin:0;color:var(--muted);">Session contains PII; shortened retention applied</p>
+            </div>
+            <div style="padding:1rem;border-top:1px solid var(--border);">
+              <label style="display:block;font-weight:600;margin-bottom:0.35rem;">Reviewer comment (required)</label>
+              <textarea rows="3" placeholder="Document decision…" style="width:100%;padding:0.5rem;border:1px solid var(--border);border-radius:var(--radius);font-family:inherit;"></textarea>
+              <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+                <button class="btn btn-primary" type="button">Approve</button>
+                <button class="btn btn-danger" type="button">Reject</button>
+                <button class="btn" type="button">Escalate</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

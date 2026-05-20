@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy editor — Compliance Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/common.css">
+  
+</head>
+<body>
+  <div class="mockup-banner">Mockup · <a href="policies.html">← Policies</a> · Policy editor (F3.2, F3.3)</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><h1>Compliance</h1><p>Pratyabhi Corp · Production</p></div>
+      <ul class="nav">
+        <li class="nav-section">Monitor</li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sessions.html">Sessions</a></li>
+        <li><a href="review.html">Review queue</a></li>
+        <li class="nav-section">Govern</li>
+        <li><a href="policies.html" class="active">Policies</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </aside>
+    <div class="main">
+      <header class="topbar"><h2>PII — No SSN in prompts</h2><div class="topbar-actions"><span class="badge badge-clean">Active · v3</span><button class="btn" type="button">Save draft</button><button class="btn btn-primary" type="button">Publish</button></div></header>
+      <main class="content">
+        <div style="display:grid;grid-template-columns:1fr 340px;gap:1rem;">
+          <section class="panel">
+            <div class="panel-header"><h3>Rules</h3></div>
+            <div class="form-grid">
+              <div class="form-row"><label>Policy name</label><input type="text" value="PII — No SSN in prompts"></div>
+              <div class="form-row"><label>Description</label><textarea rows="2">Block Social Security numbers in user prompts and model outputs.</textarea></div>
+            </div>
+            <div style="padding:0 1rem 1rem;">
+              <div class="toggle-row"><span><strong>PII detection</strong><br><small style="color:var(--muted)">Scan for government IDs, SSN patterns</small></span><input type="checkbox" checked></div>
+              <div class="toggle-row"><span><strong>Blocked topics</strong><br><small style="color:var(--muted)">Medical, legal, financial advice</small></span><input type="checkbox"></div>
+              <div class="toggle-row"><span><strong>Retention limit</strong><br><small style="color:var(--muted)">Auto-expire sessions with PII</small></span><input type="checkbox" checked></div>
+              <div class="toggle-row"><span><strong>Geo restriction</strong><br><small style="color:var(--muted)">EU-only inference region</small></span><input type="checkbox"></div>
+              <div class="toggle-row"><span><strong>Custom regex</strong><br><small style="color:var(--muted)"><code>\d{3}-\d{2}-\d{4}</code></small></span><input type="checkbox" checked></div>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-header"><h3>Simulate</h3></div>
+            <div style="padding:1rem;">
+              <label style="font-weight:600;font-size:0.8125rem;">Sample input</label>
+              <textarea rows="5" style="width:100%;margin:0.5rem 0;padding:0.5rem;border:1px solid var(--border);border-radius:var(--radius);font-family:inherit;">Customer SSN is 123-45-6789 for verification.</textarea>
+              <button class="btn btn-primary" type="button" style="width:100%;">Run simulation</button>
+              <div class="preview-result fail">FAIL — Rule <strong>Custom regex</strong> matched at position 16</div>
+              <div class="preview-box" style="margin-top:1rem;">Customer SSN is <span style="background:#fbbf24;color:#000;">123-45-6789</span> for verification.</div>
+            </div>
+          </section>
+        </div>
+</main>
+    </div>
+  </div>
+</body>
+</html>

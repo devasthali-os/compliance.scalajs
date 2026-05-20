@@ -1,5 +1,4 @@
-scalajs on nodejs
------------------
+# scalajs on nodejs
 
 ```bash
 ## install sjs
@@ -7,10 +6,11 @@ npm install
 
 ## transpile scalajs to js, using a task defined in package.js
 npm run sbtInit   ## downloads sbt into node_modules/sbt (via sjs-nodejs)
+
 npm run sbtBuild  ## needs JRE; runs buildJs (fastOptJS + copy to resources)
 ```
 
-```
+```bash
 $ npm run sjs
 [info] Loading settings from idea.sbt ...
 [info] Loading global plugins from /Users/prayagupd/.sbt/1.0/plugins
@@ -24,16 +24,17 @@ welcome to Compliance
 [success] Total time: 3 s, completed Jun 27, 2018 8:04:28 PM
 ```
 
-```
+```bash
 $ node target/scala-3.3.4/scalajs-on-nodejs-fastopt/main.js
 welcome to Compliance
 ```
 
-run on nodejs
--------------
+# run on nodejs
 
-```
+```bash
 npm start
 ```
 
 go to http://localhost:8080/
+
+UI mockups (static wireframes) are at http://localhost:8080/mockups/ — source in `src/main/resources/mockups/`.
