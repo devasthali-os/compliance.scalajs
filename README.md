@@ -37,4 +37,4 @@ npm start
 
 go to http://localhost:8080/
 
-UI mockups (static wireframes) are at http://localhost:8080/mockups/ — source in `src/main/resources/mockups/`.
+The Scala.js app implements the compliance UI (dashboard, sessions, policies, review, reports) with hash routing. Static HTML reference mockups remain at http://localhost:8080/mockups/.

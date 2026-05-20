@@ -1,19 +1,9 @@
 package com.pratyabhi.compliance
 
+import com.pratyabhi.compliance.app.App
 import org.scalajs.dom
-import scala.scalajs.js
 
-object Compliance {
+object Compliance:
 
   def main(args: Array[String]): Unit =
-    dom.document.addEventListener(
-      "DOMContentLoaded",
-      (_: dom.Event) => {
-        js.Dynamic.global.console.log("welcome to Compliance v1")
-        Option(dom.document.getElementById("headerText")).foreach { el =>
-          el.textContent = "welcome to compliance"
-        }
-      }
-    )
-
-}
+    dom.document.addEventListener("DOMContentLoaded", (_: dom.Event) => App.start())
