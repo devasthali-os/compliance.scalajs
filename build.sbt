@@ -4,11 +4,18 @@ enablePlugins(ScalaJSPlugin)
 
 version := "0.1"
 
-scalaVersion := "2.12.6"
+scalaVersion := "3.3.4"
 
 scalaJSUseMainModuleInitializer := true
 
-libraryDependencies += "org.querki" %%% "jquery-facade" % "1.2"
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.8.0"
 
-artifactPath in (Compile, fastOptJS) :=
-  ((resourceDirectory in (Compile, fastOptJS)).value / ((moduleName in fastOptJS).value + "-opt.js"))
+lazy val publishJs = taskKey[Unit]("Copy fastOptJS output into resources for the static server")
+
+publishJs := {
+  val linked = (Compile / fastOptJS).value
+  val dest = (Compile / resourceDirectory).value / "main.js"
+  IO.copyFile(linked.data, dest, preserveLastModified = true)
+}
+
+addCommandAlias("buildJs", "fastOptJS; publishJs")

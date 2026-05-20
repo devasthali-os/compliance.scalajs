@@ -21,9 +21,8 @@ RUN tar xf *.tgz
 RUN mv package/* .
 RUN rmdir package
 RUN npm install
-RUN ls -l node_modules/sjs-nodejs/
-RUN export NODE_TLS_REJECT_UNAUTHORIZED=0;node node_modules/sjs-nodejs/index.js
-RUN node_modules/sbt/bin/sbt fastOptJS
+RUN node node_modules/sjs-nodejs/index.js
+RUN node_modules/sbt/bin/sbt buildJs
 
 EXPOSE 8080
 

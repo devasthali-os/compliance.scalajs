@@ -1,26 +1,25 @@
 {
-  "name": "introv",
+  "name": "compliance",
   "version": "1.0.0",
-  "description": "introv",
+  "description": "compliance",
   "main": "server.js",
   "scripts": {
     "sbtInit": "node node_modules/sjs-nodejs/index.js",
-    "sbtBuild": "node_modules/sbt/bin/sbt fastOptJS",
-    "sjs": "node_modules/sbt/bin/sbt run",
+    "sbtBuild": "npm run sbtInit && node_modules/sbt/bin/sbt -Dsbt.global.base=/tmp/sbt-no-global buildJs",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
     "registry": "https://code.duwamish.com/artifactory/libs-release-local"
   },
-  "author": "prayagupd",
+  "author": "prayagupa",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.5",
     "express": "^4.16.1",
     "formidable": "^1.0.17",
     "immutable": "^3.8.2",
-    "request": "^2.88.0",
-    "sjs-nodejs": "1.0.1",
+    "sjs-nodejs": "file:../sjs-nodejs",
     "yauzl": "^2.10.0"
   }
 }
